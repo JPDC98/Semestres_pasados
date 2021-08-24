@@ -1,0 +1,113 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dentista</title>
+        <link rel="stylesheet" type="text/css" href="{% static '/diseo_log.css' %}">
+    </head>
+    <body>
+        <div class="center">
+            <header>
+                <h1>Clinica dental La solución</h1>
+            </header>
+            <h2>Registrar cita de paciente</h2>
+            <table>
+                <form action="/confirmaciond/" method="POST">{%csrf_token%}
+                    <tr>
+                        <td>
+                            <div>
+                                <input type="text" name="nombre" autocomplete="off" required>
+                                <samp></samp>
+                                <label>Nombre</label>
+                            </div>
+                        </td>
+                    
+                    
+                        <td>
+                            <div>
+                                <input type="text" name="altura" autocomplete="off" required>
+                                <samp></samp>
+                                <label>Altura[m]</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>
+                                <input type="text" name="edad" autocomplete="off" required>
+                                <samp></samp>
+                                <label>Edad[años]</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <input type="date" name="fecha" required>
+                                <samp></samp>
+                                <label>Fecha</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>
+                                <input type="text" name="peso" autocomplete="off" required>
+                                <samp></samp>
+                                <label>Peso[lb]</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <input type="time" name="hora" required>
+                                <samp></samp>
+                                <label>Hora</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <div class="pass">
+                                <input type="submit" value="Registrar">
+                            </div>
+                        </td>
+                    </tr>
+                </form>
+            </table>
+            <h2>Consultar citas</h2>
+            <table>
+                <form action="/respuestad/" method="POST">{%csrf_token%}
+                    <tr>
+                        
+                        <td>
+                            <div>
+                                <p>Fecha a consultar: <input type="date" name="fecha_con" required></p>
+                            </div>
+                        </td>    
+                        <td>
+                            <div class="pass">
+                                <input type="submit" value="Buscar">
+                            </div>
+                        </td> 
+                    </tr>  
+                </form>
+            </table>
+            
+            {% if insertar %}
+                <p>Hay {{insertar|length}} clientes con cita para el {{fecha_dis}}</p>
+                <ul>
+                    {%for client  in insertar%}
+                        <li>
+                            Cliente: {{client.nombre}} Hora: {{client.hora}}
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>Ingrese fecha a buscar</p>
+            {% endif %}
+            <form action="/">
+                <div class="pass">
+                    <input type="submit" value="Salir">                         
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

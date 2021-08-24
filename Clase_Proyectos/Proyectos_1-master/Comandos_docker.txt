@@ -1,0 +1,33 @@
+INICIALIZAR CONTENEDORES:
+docker run <nombre del contenedor>
+
+VER QUE IMAGENES TENEMOS DESCARGADAS:
+docker images 
+
+VER QUE CONTENEDORES ESTAN EN EJECUCIÓN:
+docker ps
+
+BUSCAR IMAGENES DE DOCKER:
+docker search <tipo o clase de imagnenes a buscar>
+
+VER HISTORIAL DE CONTENEDORES EJECUTADOS Y DETENIDOS:
+docker ps -a
+
+BORRAR CONTENEDORES:
+docker rm <primeros dos simbolos del contenedor>
+
+COMANDOS CONVINADOS:
+    ejecutar imagen y comando:
+docker run <nombre del contenedor> <comando a ejecutar>
+    ejecutar terminalse de imagenes de SO: 
+docker run -i -t ubuntu bash 
+    poner nombre a los contenedores:
+docker run --name <nombre a poner> -it <nombre de la imagen>
+    salir pero dejar el contenedor corriendo:
+ctrl+p+q 
+    volver a conectarse a un contenedor que esta corriendo:
+docker attach <primeros tres simbolos del contenedor>
+    detener un contenedor:
+docker stop <primeros tres simbolos del contenedor>
+    iniciar un contenedor:
+docker start <primeros tres simbolos del contenedor>

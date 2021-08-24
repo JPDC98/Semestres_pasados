@@ -1,0 +1,28 @@
+CLONAR REPOSITORIO EN DIFERENTES RAMAS:
+git clone --branch <nombre de la rama> <remote-repo-url>
+
+COMO SINCRONIZAR UNA CARPETA DE GIT:
+git init
+git add "<nombre carpeta>"
+git commit -m "<escribe algo>"
+git remote add origin <remote-repo-url>
+git push -u origin master
+
+OR:
+
+echo "# Proyectos_1" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/JPDC98/Proyectos_1.git
+git push -u origin main
+
+OTROS MOMANDOS:
+git pull
+git status
+
+SINCRONIZAR REPOSITORIO EXISTENTE:
+git remote add origin https://github.com/JPDC98/Proyectos_1.git
+git branch -M main
+git push -u origin main

@@ -1,0 +1,1 @@
+Dentro de la carpeta "django" se encontrara los documentos de docker compose que se solicitan para realizar el proyecto en docker

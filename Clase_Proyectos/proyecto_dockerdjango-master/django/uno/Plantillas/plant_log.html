@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PROTO LOGIN</title>  
+        <link rel="stylesheet" type="text/css" href="{% static '/diseo_log.css' %}"> 
+    </head>
+    <body>
+        <div class="center">
+            <h1>Bienvenido Programas</h1>
+            <form action="" method="POST">{%csrf_token%}
+                <div class="txt_field">
+                    <input type="text" name="usuario" autocomplete="off" required>
+                    <samp></samp>
+                    <label>Usuario</label>
+                </div>
+                <div class="txt_field">
+                    <input type="password" name="contra" autocomplete="off" required>
+                    <samp></samp>
+                    <label>Contraseña</label>
+                </div>
+                <div class="pass">
+                    <p><input type="submit" value="Ingresar"></p>
+                </div>
+            </form>
+        </div>
+        
+    </body>
+</html>

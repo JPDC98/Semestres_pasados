@@ -1,0 +1,25 @@
+----------------------------------------------------PASOS INISPENSABLES----------------------------------------
+CREAR UN PROYECTO EN DJANGO:
+django-admin startproject <nombre del proyecto>
+
+INICIAR PROYECTO DJANGO:
+python manage.py migrate
+-------------------------------------------------------------------------------------------------------------
+LISTA DE COMANDOS QUE NOS OFRECE "manage.py":
+manage.py help
+-------------------------------------------------------------------------------------------------------------
+CREAR UNA APLICACIÓN:
+python manage.py startapp <Nombre de la carpeta>
+
+VERIFICAR ERRORES EN PROYECTO:
+python manage.py check <nombre aplicación del proyecto>
+
+CREACIÓN DE BASE DE DATOS:
+python manage.py makemigrations; posteriormente se hace un "python manage.py migrate"
+
+ENTRAR A CONSOLA PARA BASE DE DATOS:
+python manage.py shell 
+
+clave cliente
+holacomoestamos_123
+
